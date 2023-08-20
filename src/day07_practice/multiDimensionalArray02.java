@@ -12,27 +12,26 @@ public class multiDimensionalArray02 {
 
         String [][] sehirlerNufuslar={{"Ankara","5.000.000"},{"Kırıkkale","277.000"},{"Adana","2.000.000"},{"Elazığ","450.000"},{"Amsterdan","1.100.000"}};
 
-        Scanner scan= new Scanner(System.in);
-        System.out.print("Lutfen Nüfusunu öğrenmek istediğiniz Şehri yazınız: ");
-        String arananSehir=scan.nextLine();
+      Scanner scan = new Scanner(System.in);
+        System.out.println("Nufusunu öğrenmek istediğiniz şehiri yazın");
+        String arananSehir = scan.next();
 
         boolean kontrol=false;
 
-        for (int i = 0; i < sehirlerNufuslar.length ; i++) {
+        for (int i = 0; i <sehirlerNufuslar.length ; i++) {
 
-            if (arananSehir.equalsIgnoreCase(sehirlerNufuslar[i][0])) {
-                System.out.print(arananSehir + " Şehrin Nufusu: " + sehirlerNufuslar[i][1]);
-                kontrol = true;
+            if (arananSehir.equalsIgnoreCase(sehirlerNufuslar[i][0])){
+                System.out.println(arananSehir + " Şehrinin nufusu: "+ sehirlerNufuslar[i][1]);
+                kontrol=true;
                 break;
 
+
             }
-        }if (!kontrol){
-            System.out.println("Girdiğiniz Şehir'in nufusu datalarımızda yoktur");
+
         }
-
-
-
-
+    if (!kontrol){
+        System.out.println("Girdiğiniz şehir datalarımızda mevcut değil");
+    }
 
     }
 }
